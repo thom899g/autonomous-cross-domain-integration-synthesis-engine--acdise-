@@ -1,0 +1,31 @@
+# ACDISE Configuration
+firebase:
+  credential_path: "firebase-credentials.json"
+  project_id: "acdise-system"
+  firestore_collection: "integration_states"
+  realtime_db_url: "https://acdise-system-default-rtdb.firebaseio.com/"
+
+neural_network:
+  hidden_layers: [128, 64, 32]
+  activation: "relu"
+  optimizer: "adam"
+  batch_size: 32
+  epochs: 100
+  validation_split: 0.2
+
+evolutionary_algorithm:
+  population_size: 50
+  generations: 100
+  mutation_rate: 0.1
+  crossover_rate: 0.7
+  elite_count: 5
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_path: "logs/acdise_engine.log"
+
+performance_thresholds:
+  latency_ms: 500
+  error_rate: 0.05
+  resource_utilization: 0.85
